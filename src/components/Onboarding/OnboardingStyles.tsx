@@ -4,20 +4,20 @@ const onboardingStyles = (dimensions) => {
     return StyleSheet.create({
         container: {
         flex: 1,
-        //alignItems: 'center',
-        backgroundColor: 'white'
+        backgroundColor: 'white',
+        alignItems: 'center'
       },
     
       person: {
         width: dimensions.width * 1,
-        height: 488
+        height: '60%'
       },
 
       stepIndicatorContainer: {
         position: 'absolute',
         width: dimensions.width * 0.8,
         alignSelf: 'center',
-        marginTop: dimensions.height * 0.58,
+        marginTop: dimensions.height * 0.56,
         flexDirection: "row",
     },
 
@@ -37,7 +37,6 @@ const onboardingStyles = (dimensions) => {
 
     numberBox: {
         width: dimensions.width * 0.4,
-        //backgroundColor: 'black',
         height: '100%',
         marginLeft: 6,
         justifyContent: 'center',
@@ -49,7 +48,6 @@ const onboardingStyles = (dimensions) => {
     },
 
     welcomeText: {
-        //maxWidth: 220,
         color: 'black',
         fontSize: 16,
         fontWeight: "700"
@@ -62,7 +60,8 @@ const onboardingStyles = (dimensions) => {
     descriptionBox: {
         width: dimensions.width * 0.9,
         height: 38,
-        alignSelf: "center"
+        alignSelf: "center",
+        marginBottom: 20
     },
 
     descriptionText: {

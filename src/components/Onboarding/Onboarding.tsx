@@ -4,6 +4,7 @@ import Person from '../../images/person1.png';
 import onboardingStyles from './OnboardingStyles';
 import Lady from '../../images/person2.png'
 import One from '../../icons/01.png'
+import AppButton from '../AppButton/AppButton';
 
 const imageData = [
     {
@@ -18,7 +19,7 @@ const imageData = [
 ]
 
 
-const Onboarding = () => {
+const Onboarding = ({ navigation }) => {
     const [screenIndex, setScreenIndex] = useState(0);
   const dimensions = useWindowDimensions();
   const styles = onboardingStyles(dimensions);
@@ -55,6 +56,28 @@ const Onboarding = () => {
       <View style={styles.descriptionBox}>
         <Text style={styles.descriptionText}>Streamline your business operations and maximize efficiency with our all-in-one platform.</Text>
       </View>
+
+      <AppButton
+        backgroundColor={'#00A6FB'}
+        color={'#FFFFFF'}
+        width={dimensions.width * 0.8}
+        height={dimensions.height * 0.065}
+        marginBottom={dimensions.height * 0.01}
+        onPress={() => navigation.navigate('Home')}
+      >
+    <Text>Home</Text>
+    </AppButton>
+
+    <AppButton
+        backgroundColor={'#FFF'}
+        color={'#00A6FB'}
+        width={dimensions.width * 0.8}
+        height={dimensions.height * 0.065}
+        
+      >
+    <Text>Sign Up</Text>
+      </AppButton>
+    
     </View>
   )
 }
