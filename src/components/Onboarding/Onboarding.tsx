@@ -20,7 +20,7 @@ const imageData = [
 
 
 const Onboarding = ({ navigation }) => {
-    const [screenIndex, setScreenIndex] = useState(0);
+  const [screenIndex, setScreenIndex] = useState(0);
   const dimensions = useWindowDimensions();
   const styles = onboardingStyles(dimensions);
 
@@ -63,7 +63,7 @@ const Onboarding = ({ navigation }) => {
         width={dimensions.width * 0.8}
         height={dimensions.height * 0.065}
         marginBottom={dimensions.height * 0.01}
-        onPress={() => navigation.navigate('Home')}
+        onPress={() => navigation.navigate('MainApp')}
       >
     <Text>Home</Text>
     </AppButton>
@@ -71,6 +71,8 @@ const Onboarding = ({ navigation }) => {
     <AppButton
         backgroundColor={'#FFF'}
         color={'#00A6FB'}
+         borderWidth={1}
+        borderColor="#00A6FB"
         width={dimensions.width * 0.8}
         height={dimensions.height * 0.065}
         

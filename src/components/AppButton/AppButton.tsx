@@ -10,11 +10,16 @@ interface AppButtonProps {
   marginTop?: number;
   marginBottom?: number;
   color?: string;
+  position?: string;
   fontFamily?: string;
   borderRadius?: number;
   fontSize?: number;
   disabled?: boolean;
   height?: number | string;
+  borderWidth?: number;
+  borderColor?: string;
+  left?: number;
+  right?: number;
   children: ReactNode; 
 }
 
@@ -29,6 +34,11 @@ const AppButton: React.FC<AppButtonProps> = ({
   fontSize,
   disabled,
   height,
+  borderWidth,
+  borderColor,
+  right,
+  position,
+  left,
   children,
 }) => {
   return (
@@ -41,6 +51,11 @@ const AppButton: React.FC<AppButtonProps> = ({
           height: height,
           marginTop: marginTop,
           marginBottom: marginBottom,
+          borderColor: borderColor,
+          borderWidth: borderWidth,
+          right: right,
+          left: left,
+          position: position
         },
       ]}
       onPress={onPress}
